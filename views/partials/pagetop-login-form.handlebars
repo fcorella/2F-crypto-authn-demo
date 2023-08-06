@@ -1,0 +1,19 @@
+<script type="module">
+
+import { readCSRFCookie, checkLogin } from "./utils.js";
+
+const formElt = document.getElementById("the-form");
+formElt.addEventListener("submit", checkLogin);
+
+</script>
+
+<form id="the-form" action="/log-in" method="post">
+    <input type="hidden" name="CSRFToken" id="CSRFToken">
+    <input type="hidden" name="credentialFound" id="credentialFound">
+    Email address:
+    <input type="text" name="email" id="email">
+    <input type="submit" value="Log in">
+    <span style="color: red" id="loginError"></span>
+    <br>
+    Not a member? Please <a href="/register.html">register</a>
+</form> 

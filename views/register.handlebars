@@ -1,0 +1,86 @@
+<script type="module">
+
+import { readCSRFCookie } from "./utils.js";
+
+function checkRegistration(submitEvent) {
+    let s = "";
+
+    const emailElt = document.getElementById("email");
+    const email = emailElt.value.replace(/^\s+/,"").replace(/\s+$/,"");
+    emailElt.value = email;
+    if (email == "") {
+        s += "Invalid email address<br>";
+    }
+    else if (email.search(/^[A-Za-z0-9]+@[A-Za-z0-9]+(\.[A-Za-z0-9]+)*\.[A-Za-z]+$/) == -1) {
+        s += "Please enter a valid email address<br>";
+    }
+
+    const fnElt = document.getElementById("firstname");
+    const firstname = fnElt.value.replace(/^\s+/,"").replace(/\s+$/,"");
+    fnElt.value = firstname;
+    if (firstname == "") {
+        s += "Please enter the first name<br>";
+    }
+    else if (firstname.search(/^[A-Za-z]+$/) == -1) {
+        s += "The first name can only have ASCII letters<br>";
+    }
+
+    const lnElt = document.getElementById("lastname");
+    const lastname = lnElt.value.replace(/^\s+/,"").replace(/\s+$/,"");
+    lnElt.value = lastname;
+    if (lastname == "") {
+        s += "Please enter the last name<br>";
+    }
+    else if (lastname.search(/^[A-Za-z]+$/) == -1) {
+        s += "The last name can only have ASCII letters<br>";
+    }
+
+    const CSRFTokenElt = document.getElementById("CSRFToken");
+    const CSRFCookie = readCSRFCookie();
+    if (!CSRFCookie) {
+	s += "No CSRF cookie found; try refreshing the page<br>";
+    }
+    else {
+	CSRFTokenElt.value = CSRFCookie;
+    }
+
+    if (s) {
+        document.getElementById("reg-error").innerHTML = s;
+        submitEvent.preventDefault();
+    }
+}
+
+const formElt = document.getElementById("the-form");
+formElt.addEventListener("submit", checkRegistration);
+
+</script>
+
+<h1>Registration</h1>
+
+<p>
+<span style="color: red" id="reg-error"></span>
+</p>
+
+<form id="the-form" action="/register" method="post">
+    <input type="hidden" name="CSRFToken" id="CSRFToken">
+    Email:<br>
+    <input type="text" name="email" id="email">
+    <br>
+    First name:<br>
+    <input type="text" name="firstname" id="firstname">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" id="lastname">
+    <br>
+    <br>
+    When you submit this form, an email message with a link<br>
+    will be sent to verify the email address and install
+    a cryptographic credential
+    <br>
+    <br>
+    <input type="submit" value="Register">
+    <br>
+    <br>
+    </form> 
+
+<a href="/public-page-1.html">Go to the home page</a>

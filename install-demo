@@ -1,0 +1,65 @@
+#!/bin/bash
+
+echo "---------------- installing mysql"
+yum -y install https://dev.mysql.com/get/mysql80-community-release-el7-5.noarch.rpm || exit 1
+yum -y install mysql-community-server || exit 1
+
+echo "---------------- configuring mysql"
+# skip-grant-tables implies skip-networking,
+# allowing unauthenticated local access to mysql
+echo "skip-grant-tables" >> /etc/my.cnf
+
+echo "---------------- starting mysqld as a systemd service"
+systemctl start mysqld || exit 1
+systemctl status mysqld || exit 1
+
+echo "---------------- enabling mysqld to restart after reboot"
+systemctl enable mysqld || exit 1
+
+echo "---------------- installing nodejs"
+curl -sL https://rpm.nodesource.com/setup_16.x | bash - || exit 1
+yum install -y nodejs || exit 1
+node --version || exit 1
+
+echo "---------------- allowing node to receive network connections"
+/usr/sbin/setcap 'cap_net_bind_service=+ep' /usr/bin/node || exit 1
+
+echo "---------------- installing the AWS SDK for JavaScript"
+npm install @aws-sdk/client-ses || exit 1
+
+echo "---------------- installing dependencies"
+npm install . || exit 1
+
+echo "---------------- prompting for the hostname in the email verification link"
+read -p "please enter the public ip address of this EC2 instance, or a domain name mapping to the address: " host
+sed -i s/HOSTNAME/$host/g demo.mjs || exit 1
+
+echo "---------------- prompting for the sender address in the email verification link"
+read -p "please enter an SES-verified address to be used as the sender address in the email verification message: " senderaddress
+sed -i s/SENDERADDRESS/$senderaddress/g demo.mjs || exit 1
+
+echo "---------------- installing the demo as a systemd service"
+cp demo.service /etc/systemd/system || exit 1
+
+# echo "---------------- starting the demo"
+# systemctl start demo || exit 1
+# systemctl status demo || exit 1
+# 
+# echo "---------------- enabling demo to restart after reboot"
+# systemctl enable demo || exit 1
+
+echo "---------------- success"
+echo "demo installed successfully;"
+echo "to start it from bash:"
+echo "    node demo.mjs"
+echo "to start it as a systemd service:"
+echo "    sudo systemctl start demo"
+echo "to restart it automatically on reboot:"
+echo "    sudo systemctl enable demo"
+echo "to stop it when running as a systemd service:"
+echo "    sudo systemctl stop demo"
+echo "to view the systemd log:"
+echo "    journalctl -u demo"
+echo " "
+echo "INSTALLATION SUCCESSFUL" 
+echo " "
