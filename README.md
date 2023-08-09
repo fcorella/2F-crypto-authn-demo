@@ -1,4 +1,4 @@
-# UNDER CONSTRUCTION
+# A demonstration of two-factor cryptographic authentication with a familiar user experience
 
 As announced and in this [blog
 post](/2023/08/07/a-demonstration-of-two-factor-cryptographic-authentication-with-a-familiar-user-experience/),
