@@ -1,7 +1,7 @@
 # A Demonstration of Two-Factor Cryptographic Authentication with a Familiar User Experience
 
 As announced and in this [blog
-post](/2023/08/07/a-demonstration-of-two-factor-cryptographic-authentication-with-a-familiar-user-experience/),
+post](/2023/08/09/a-demonstration-of-two-factor-cryptographic-authentication-with-a-familiar-user-experience/),
 this repository contains the code of a demonstration of two-factor
 cryptographic authentication of a user to a web site (the relying
 party, RP), using a [fusion
