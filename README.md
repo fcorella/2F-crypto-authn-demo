@@ -1,4 +1,4 @@
-# A demonstration of two-factor cryptographic authentication with a familiar user experience
+# A Demonstration of Two-Factor Cryptographic Authentication with a Familiar User Experience
 
 As announced and in this [blog
 post](/2023/08/07/a-demonstration-of-two-factor-cryptographic-authentication-with-a-familiar-user-experience/),
@@ -160,7 +160,7 @@ Install git (`sudo yum -y install git`) and clone this
 repository into a directory `/home/ec2-user/2F-crypto-authn-demo`.
 
 Change directory to `2F-crypto-authn-demo`, give execute permission to
-install-demo (`chmod a+x install-demo`), and run the installation
+install-demo and demo.mjs (`chmod a+x install-demo demo.mjs`), and run the installation
 script (`sudo ./install-demo`).  The script will install
 MySQL, Nodejs, and node modules including pjcl.  The script will ask
 you for the public IP address of the server or a domain name that maps
