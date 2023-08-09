@@ -159,8 +159,9 @@ AWS Simple Email Service (SES).
 Install git (`sudo yum -y install git`) and clone this
 repository into a directory `/home/ec2-user/2F-crypto-authn-demo`.
 
-Change directory to `2F-crypto-authn-demo`, and run the installation
-script `install-demo` (`sudo ./install-demo`).  The script will install
+Change directory to `2F-crypto-authn-demo`, give execute permission to
+install-demo (`chmod a+x install-demo`), and run the installation
+script (`sudo ./install-demo`).  The script will install
 MySQL, Nodejs, and node modules including pjcl.  The script will ask
 you for the public IP address of the server or a domain name that maps
 to the IP address, and a sender address for the email verification
