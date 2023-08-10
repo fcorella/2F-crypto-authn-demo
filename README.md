@@ -13,10 +13,8 @@ familiar user experience.
 
 A live demonstration of the code is available at `demo.pomcor.com`.
 The live demo may be discontinued or restarted at any time; but if you
-have an AWS account that allows you to send mail, you can set up and
-run the demo on your own EC2 instance, using the install-script
-included in the repository, following instructions that you can find
-below.
+have an AWS account that allows you to send mail, you can set up the demo on your own EC2 instance using the install-script
+included in the repository and following the instructions below.
 
 ## User experience
 
@@ -143,7 +141,7 @@ same DRBG initialized with the seed</i> is used to generate the extended
 key pair (ECDSA key pair generation and random generation of the secret
 salt).
 
-## How to run the demo
+## How to set up the demo on your own Amazon AWS EC2 server
 
 To set up the demo on your own server you need to have an [Amazon AWS account](https://aws.amazon.com/free/free-tier/?p=ft&z=subnav&loc=1)
 that allows you to send mail using the [AWS Simple Email Service](https://aws.amazon.com/ses/).
@@ -152,7 +150,7 @@ Launch a free-tier eligible EC2 server running Amazon Linux 2 on AWS.
 *Be sure to use Amazon Linux 2 rather than Amazon Linux 2023*; Amazon
 Linux 2023 does not support the MySQL community server at this time.
 
-Assign an IAM role to the server that allows it to send mail using the
+Assign an IAM role to the server with a policy that allows it to send email using the
 AWS Simple Email Service (SES).
 
 Install git (`sudo yum -y install git`) and clone this
@@ -178,7 +176,7 @@ demo.mjs` while in the `2F-crypto-authn-demo` directory.
 The demo comes with a self-signed certificate `server-cert.pem` and
 its associated private key `server-key.pem`.  If you want to avoid the
 browser warnings, you can replace them with a domain certificate for
-your chosen hostname purchased from a CA and its private key.
+your chosen hostname and its private key.
 
 ## Open source but not free
 
