@@ -145,8 +145,8 @@ salt).
 
 ## How to run the demo
 
-To run the demo you need to have an AWS account that allows you to send
-mail.
+To set up the demo on your own server you need to have an [Amazon AWS account](https://aws.amazon.com/free/free-tier/?p=ft&z=subnav&loc=1)
+that allows you to send mail using the [AWS Simple Email Service](https://aws.amazon.com/ses/).
 
 Launch a free-tier eligible EC2 server running Amazon Linux 2 on AWS.
 *Be sure to use Amazon Linux 2 rather than Amazon Linux 2023*; Amazon
