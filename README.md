@@ -1,6 +1,6 @@
 # A Demonstration of Two-Factor Cryptographic Authentication with a Familiar User Experience
 
-As announced and in this [blog
+As announced in this [blog
 post](https://pomcor.com/2023/08/09/a-demonstration-of-two-factor-cryptographic-authentication-with-a-familiar-user-experience/),
 this repository contains the code of a demonstration of two-factor
 cryptographic authentication of a user to a web site (the relying
@@ -196,7 +196,7 @@ one.
 
 ## See also
 
-* General information about cryptographic authentication can be found
-  in the [cryptographic authentication
+* The [Demonstrations page](https://pomcor.com/demos/) of the Pomcor site.
+* The [cryptographic authentication
   page](https://pomcor.com/cryptographic-authentication/) of the
   Pomcor site.
