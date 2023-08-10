@@ -197,6 +197,6 @@ one.
 ## See also
 
 * The [Demonstrations page](https://pomcor.com/demos/) of the Pomcor site.
-* The [cryptographic authentication
+* The [Cryptographic Authentication
   page](https://pomcor.com/cryptographic-authentication/) of the
   Pomcor site.
