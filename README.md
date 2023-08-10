@@ -23,7 +23,7 @@ below.
 ### Registration
 
 1. The user visits the registration page in a browser and enters user
-data (first and last name in this demo) and an email address.
+data (first and last names in this demo) and an email address.
 
 1. An email verification link is sent to the address.
 
@@ -33,10 +33,9 @@ a password.
 
 1. The user enters and confirms the password.
 
-1. The registration is completed, and the user is logged in on the browser.
+1. The registration is completed and the user is logged in on the browser.
 
-### Login on a browser where a cryptographic credential has been
-installed
+### Login on a browser where a cryptographic credential has been installed
 
 1. The user submits her email address and is prompted for her
 password.
@@ -116,15 +115,15 @@ same email address after the credential derived from the address has
 been compromised.  This is implemented using a database table of
 master record versions where each record contains an auto-incremented
 version number and a corresponding random value of the master record.
-When a user registers, the latest version number is stored in the user
+When a user registers the latest version number is stored in the user
 record, causing the corresponding master record to be used to derive
 the cryptographic credential from the user's email address in all
-browsers used by the user.  If that credential is compromised, the
+browsers.  If that credential is compromised, the
 master record can be rotated to add a new master record version to the
 table.  In this demo, for simplicity, the rotation is triggered by a
 GET request to "/rotateMasterRecord".  In production, the user would
-report the compromise to an adminmistrator who would perform the
-rotation and store the new version number in the user's record: this
+report the compromise to an administrator who would perform the
+rotation and store the new version number in the user's record; that
 is not implemented in this demo.
 
 ### Graphical pseudo-code
