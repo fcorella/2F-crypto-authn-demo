@@ -136,11 +136,11 @@ provide a step-by-step description of the code.
 The backend runs under Nodejs and uses a MySQL database.  The [Pomcor
 JavaScript Cryptographic Library
 (PJCL)](https://github.com/fcorella/pjcl) is used on the frontend and
-the backend.  A deterministic random bit generator (DRBG) initialized
-with entropy sources is used to generate random bits for various
-purposes (ECDSA signature, authentication challenge, etc.) and the
-same DRBG initialized with the seed is used to generate the extended
-key pair (ECDSA key pair generation, random generation of the secret
+the backend.  A [deterministic random bit generator (DRBG)](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-90Ar1.pdf) <i>initialized
+with entropy sources</i> is used to generate random bits for various
+purposes (ECDSA signature, authentication challenge, etc.) while <i>the
+same DRBG initialized with the seed</i> is used to generate the extended
+key pair (ECDSA key pair generation and random generation of the secret
 salt).
 
 ## How to run the demo
