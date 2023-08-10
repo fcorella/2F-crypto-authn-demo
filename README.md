@@ -128,8 +128,8 @@ is not implemented in this demo.
 
 ### Graphical pseudo-code
 
-The slides of the powerpoint presentation in the repository file
-`2F-crypto-authn.pptx` provide a step-by-step description of the code.
+The slides in [2F-crypto-authn.pptx](https://github.com/fcorella/2F-crypto-authn-demo/blob/main/2F-crypto-authn.pptx) 
+provide a step-by-step description of the code.
 
 ## Technical ingredients used in the demonstration
 
