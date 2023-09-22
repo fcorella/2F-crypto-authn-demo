@@ -178,18 +178,17 @@ its associated private key `server-key.pem`.  If you want to avoid the
 browser warnings, you can replace them with a domain certificate for
 your chosen hostname and its private key.
 
-## Open source but not free
+## Streamlined process for getting a license to US patent 9,887,989
 
-This software is provided as a demonstration of a method of user
-authentication to a web site or web application that incorporates an
-invention claimed by US patent 9,887,989.  The patent is owned by
-Pomian & Corella, LLC, also known by the registered tradename Pomcor.
-
-The copyright license of this repository does not wave any patent
-rights.  Therefore non-experimental use of the software may require a
-license to the patent.  You may use the [contact
-form](https://pomcor.com/contact-us/) of the Pomcor site to request
-one.
+As stated in the LICENSE, this software is provided as a demonstration
+of a method of user authentication to a web site or web application
+that incorporates an invention claimed by US patent 9,887,989, and a
+license to the patent may be required for non-experimental use of the
+software.  The patent is owned by Pomcor, and you may use the [contact
+form](https://pomcor.com/contact-us/) of the Pomcor site to request a
+license.  A
+[streamlined process](https://pomcor.com/streamlined-process-for-licensing-us-patent-9887989-to-a-particular-web-site/)
+for obtaining a patent for a particular web site is available.
 
 ## See also
 
