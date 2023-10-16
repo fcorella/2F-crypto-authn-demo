@@ -174,9 +174,14 @@ demo.mjs` while in the `2F-crypto-authn-demo` directory.
 ## Server certificate
 
 The demo comes with a self-signed certificate `server-cert.pem` and
-its associated private key `server-key.pem`.  If you want to avoid the
-browser warnings, you can replace them with a domain certificate for
-your chosen hostname and its private key.
+its associated private key `server-key.pem`, which you can replace with
+a domain certificate for your chosen hostname and its associated private key.
+If you don't replace them, the use of the self-signed
+certificate will cause the browser to produce a warning that the connection
+is not private, or an error that the site is not reachable.  If the browser produces 
+an error, refreshing the page will take you to the warning and you will be 
+able to ignore the warning and proceed to the demo.
+
 
 ## Streamlined process for getting a license to US patent 9,887,989
 
