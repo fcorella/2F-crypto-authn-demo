@@ -17,8 +17,8 @@ echo "---------------- enabling mysqld to restart after reboot"
 systemctl enable mysqld || exit 1
 
 echo "---------------- installing nodejs"
-curl -sL https://rpm.nodesource.com/setup_16.x | bash - || exit 1
-yum install -y nodejs || exit 1
+sudo yum install https://rpm.nodesource.com/pub_16.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y || exit 1
+sudo yum install nodejs -y --setopt=nodesource-nodejs.module_hotfixes=1 || exit 1
 node --version || exit 1
 
 echo "---------------- allowing node to receive network connections"
