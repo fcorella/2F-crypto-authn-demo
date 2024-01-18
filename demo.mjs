@@ -869,6 +869,9 @@ app.get('/install-credential-in-new-browser',function(req,res) {
 	    const emailDerivedSeed = computeEmailDerivedSeed(email, result.masterSecret);
 	    const serverEntropyHex = pjclBitArray2Hex(pjclRBGGen(rbgStateObject,rbgSecurityStrength,rbgSecurityStrength));
 
+            if (!getVerifiedCSRFCookie(req)) {
+                setCSRFCookie(res);
+            }
 	    // prompt for password,
 	    // construct cryptographic credential from seed
             // sign challenge
