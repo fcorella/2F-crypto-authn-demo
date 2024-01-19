@@ -869,9 +869,15 @@ app.get('/install-credential-in-new-browser',function(req,res) {
 	    const emailDerivedSeed = computeEmailDerivedSeed(email, result.masterSecret);
 	    const serverEntropyHex = pjclBitArray2Hex(pjclRBGGen(rbgStateObject,rbgSecurityStrength,rbgSecurityStrength));
 
-            if (!getVerifiedCSRFCookie(req)) {
+            // the following handles the corner case where the user closes the browser
+	    // that has sent the email verification link before opening the link in that browser,
+	    // or opens the link in a different browser which is not currently visiting a page 
+	    // of the relying party
+	    //
+	    if (!getVerifiedCSRFCookie(req)) {
                 setCSRFCookie(res);
             }
+		
 	    // prompt for password,
 	    // construct cryptographic credential from seed
             // sign challenge
