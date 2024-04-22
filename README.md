@@ -5,7 +5,7 @@ post](https://pomcor.com/2023/08/09/a-demonstration-of-two-factor-cryptographic-
 this repository contains the code of a demonstration of two-factor
 cryptographic authentication of a user to a web site (the relying
 party, RP), using a [fusion
-credential](/cryptographic-authentication/#fusion) that combines a
+credential](https://pomcor.com/cryptographic-authentication/#fusion) that combines a
 password with an extended key-pair to provide strong security and a
 familiar user experience.
 
