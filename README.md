@@ -185,8 +185,8 @@ able to ignore the warning and proceed to the demo.
 
 ## Streamlined process for getting a license to US patent 9,887,989
 
-** THE STREAMLINED PROCESS IS NO LONGER AVAILABLE.  
-PLEASE CONTACT US THROUGH THE POMCOR CONTACT PAGE IF YOU WOULD LIKE TO LICENSE THE PATENT. **
+**THE STREAMLINED PROCESS IS NO LONGER AVAILABLE.  
+PLEASE CONTACT US THROUGH THE POMCOR CONTACT PAGE IF YOU WOULD LIKE TO LICENSE THE PATENT.**
 
 As stated in the LICENSE, this software is provided as a demonstration
 of a method of user authentication to a web site or web application
