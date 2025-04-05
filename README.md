@@ -9,11 +9,10 @@ credential](https://pomcor.com/cryptographic-authentication/#fusion) that combin
 password with an extended key-pair to provide strong security and a
 familiar user experience.
 
-## Live demo
+## Demo
 
-A live demonstration of the code is available at `demo.pomcor.com`.
-The live demo may be discontinued or restarted at any time; but if you
-have an AWS account that allows you to send mail, you can set up the demo on your own EC2 instance using the install-script
+A live demo is no longer available.  But if you
+have an AWS account that allows you to send mail, you can set up a demo on your own EC2 instance using the install-script
 included in the repository and following the instructions below.
 
 ## User experience
